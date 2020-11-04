@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    list-style: none;
+    font-size: 18px;
 }
 
 :root {
@@ -15,6 +17,19 @@
 }
 
 
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 /* Responsive Styling */
 
