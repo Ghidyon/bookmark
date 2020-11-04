@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
     list-style: none;
-    font-size: 18px;
 }
 
 :root {
@@ -16,8 +15,55 @@
     --darkBlue: hsl(229, 31%, 21%);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+nav {
+    outline: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
 
+.nav-brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: none;
+}
+
+header {
+    width: 100%;
+}
+
+header .svg-container {
+    display: flex;
+    outline: 2px solid black;
+    position: relative;
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background: var(--blue);
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    clip-path: ellipse(50% 25% at 50% 50%);
+}
+
+img {
+    width: 100%;
+    z-index: 2;
+}
 
 
 
@@ -31,8 +77,44 @@
     color: hsl(228, 45%, 44%);
 }
 
+
+/* Utilities */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 /* Responsive Styling */
 
-@media (max-width: 567px) {
-    
+@media (min-width: 768px) {
+    nav {
+        padding: 3rem 0;
+    }
+
+    .nav-brand .icon-hamburger {
+        display: none;
+    }
+
+    .nav-links, .nav-links ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links ul li, .nav-links button {
+        margin-right: 2.5rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .login-btn {
+        border: 0;
+        background: var(--red);
+        border-radius: 7px;
+        color: #ffffff;
+        padding: .9rem 2.5rem;
+    }
+    /* .nav-links ul li:last-child {
+        margin: 0;
+    } */
 }
