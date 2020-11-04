@@ -44,26 +44,62 @@ header {
 
 header .svg-container {
     display: flex;
-    outline: 2px solid black;
     position: relative;
+    padding: 0 .5rem .5rem .5rem;
 }
 
 .overlay::after {
     content: "";
     position: absolute;
-    width: 300px;
-    height: 200px;
+    width: 78%;
+    height: 78%;
     background: var(--blue);
     right: 0;
     bottom: 0;
-    z-index: 1;
-    clip-path: ellipse(50% 25% at 50% 50%);
+    border-bottom-left-radius: 30%;
 }
 
 img {
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
+
+.header-content {
+    padding: 0 2rem;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--darkBlue);
+}
+
+.header-content p {
+    
+}
+
+.header-content button {
+    border: none;
+    padding: 1rem;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 5px 5px #e0e0e0;
+}
+
+.header-content button:first-child {
+    margin-right: .5rem
+}
+
+.header-content button:last-child {
+    margin-left: .5rem
+}
+
+.features h3 {
+    
+}
+
 
 
 
@@ -80,8 +116,41 @@ img {
 
 /* Utilities */
 
+.heading {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.content {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    line-height: 1.5;
+    color: var(--grayishBlue);
+}
+
+.red {
+    color: var(--red);
+}
+
+.white {
+    color: #ffffff;
+}
+
+.blue-bg {
+    background: var(--blue);
+}
+
+.gray-bg {
+    background: var(--grayishBlue);
+}
+
 .uppercase {
     text-transform: uppercase;
+}
+
+.center-text {
+    text-align: center;
 }
 
 /* Responsive Styling */
@@ -111,10 +180,6 @@ img {
         border: 0;
         background: var(--red);
         border-radius: 7px;
-        color: #ffffff;
         padding: .9rem 2.5rem;
     }
-    /* .nav-links ul li:last-child {
-        margin: 0;
-    } */
 }
