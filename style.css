@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -32,7 +32,7 @@ nav {
     outline: 1px solid black;
     display: flex;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 .nav-brand {
@@ -80,16 +80,6 @@ header .svg-container {
     line-height: 1.3;
     color: var(--darkBlue);
     margin-top: 3.2rem;
-}
-
-header button, .extension-container button, .faq-container button {
-    border: none;
-    padding: .9rem 1rem;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: .5px;
-    box-shadow: 0 5px 5px #e0e0e0;
 }
 
 header button:first-child {
@@ -211,7 +201,7 @@ header button:last-child {
 
 .faq-container {
     padding: 0 2rem;
-    margin: 9rem 0;
+    margin: 9rem 0 7.5rem 0;
 }
 
 .faq {
@@ -220,29 +210,23 @@ header button:last-child {
 }
 
 .faq-header {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .faq-header h4 {
     font-weight: 400;
     font-size: 15px;
-    align-self: flex-start;
-}
-
-.faq-header div {
-    position: absolute;
-    width: 18px;
-    height: 25px;
-    top: 0;
-    right: 0;
 }
 
 .faq p {
-    /* display: none; */
+    display: none;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: .3px;
-    line-height: 1.6;
+    line-height: 2;
+    padding-top: 2rem;
 }
 /* .faq-header div:hover {
     top: -10px;
@@ -250,11 +234,97 @@ header button:last-child {
     transform: rotate(180deg);
 } */
 
+.faq-container div:last-child {
+    margin-top: 3rem;
+}
+
+.mi-btn {
+    padding: .9rem 1.5rem; 
+}
+
+
+/* Contact Section */
+.contact-container {
+    padding: 4.5rem 2rem 4rem 2rem;
+}
+
+.contact-container h6 {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.contact-container h3 {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 1rem 0 2rem 0;
+}
+
+.email-input {
+    width: 100%;
+    box-shadow: none;
+    background: white;
+}
+
+.email-input:focus {
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: #cfcfcf;
+}
+
+.contact-btn {
+    width: 100%;
+    box-shadow: none;
+    margin-top: 1rem;
+}
+
 /* Links Section */
 
 .links {
     background: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 2.5rem 0;
 }
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+
+.links ul li {
+    font-weight: 300;
+    margin-top: 2rem;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+}
+
+.links ul li:first-child {
+    margin-top: 0;
+}
+
+.links-icon {
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links-icon div {
+    width: 22px;
+    height: 23px;
+}
+
+.links-icon div:last-child {
+    height: 21px;
+}
+
 
 
 .attribution {
@@ -283,6 +353,16 @@ header button:last-child {
     padding: 1.2rem 0 2rem 0;
 }
 
+button, input {
+    border: none;
+    padding: .9rem 1rem;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    box-shadow: 0 5px 5px #e0e0e0;
+}
+
 .margin {
     margin: 2rem 0;
 }
@@ -296,7 +376,11 @@ header button:last-child {
 }
 
 .gray {
-    color: gray;
+    color: rgb(109, 108, 108);
+}
+
+.red-bg {
+    background: var(--red);
 }
 
 .blue-bg {
@@ -313,6 +397,14 @@ header button:last-child {
 
 .center-text {
     text-align: center;
+}
+
+.red-stroke {
+    stroke: var(--red);
+}
+
+.open {
+    transform: rotate(180deg);
 }
 
 /* Responsive Styling */
