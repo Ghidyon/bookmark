@@ -29,7 +29,6 @@ img {
 /* Navbar */
 
 nav {
-    outline: 1px solid black;
     display: flex;
     align-items: center;
     padding: 2rem;
@@ -51,11 +50,11 @@ nav {
 
 header {
     width: 100%;
+    position: relative;
 }
 
 header .svg-container {
     display: flex;
-    position: relative;
     padding: 0 .5rem .5rem .5rem;
 }
 
@@ -71,7 +70,8 @@ header .svg-container {
 }
 
 .header-content {
-    padding: 0 2rem;
+    padding: 0 2rem; 
+    text-align: center;
 }
 
 .header-content h1 {
@@ -80,6 +80,11 @@ header .svg-container {
     line-height: 1.3;
     color: var(--darkBlue);
     margin-top: 3.2rem;
+}
+
+.header-content div {
+    margin: 0 -2rem;
+    text-align: center;
 }
 
 header button:first-child {
@@ -410,8 +415,56 @@ button, input {
 /* Responsive Styling */
 
 @media (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 0 2rem;
+        outline: 2px solid saddlebrown;
+    }
+
+    header:after {
+        content: "";
+        position: absolute;
+        width: 35%;
+        height: 78%;
+        background: var(--blue);
+        right: 0;
+        bottom: 0;
+        border-bottom-left-radius: 30%;
+    
+    }
+
+    header .svg-container {
+        outline: 2px solid saddlebrown;
+        padding: 0;
+        padding-left: 3.5rem;
+        width: 50%;
+    }
+
+    header .header-content {
+        outline: 2px solid saddlebrown;
+        text-align: left;
+        width: 50%;
+        padding: 0;
+    }
+
+    .header-content h1 {
+        margin-top: 2rem;
+    }
+
+    .header-content div {
+        text-align: left;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1444px) {
+
+    /* Navbar */
+
     nav {
-        padding: 3rem 0;
+        padding: 3rem 11rem;
     }
 
     .nav-brand .icon-hamburger {
@@ -424,7 +477,7 @@ button, input {
         align-items: center;
     }
 
-    .nav-links ul li, .nav-links button {
+    .nav-links ul li {
         margin-right: 2.5rem;
         font-size: 1rem;
         letter-spacing: 1px;
@@ -435,5 +488,69 @@ button, input {
         background: var(--red);
         border-radius: 7px;
         padding: .9rem 2.5rem;
+    }
+
+    header .svg-container {
+        outline: 2px solid saddlebrown;
+        width: 740px;
+    }
+    
+    header .svg-container img {
+        width: 100%;
+    }
+   
+    .overlay-right::after {
+        width: 525px;
+        height: 78%;
+        border-bottom-left-radius: 45%;
+    }
+
+    header .header-content {
+        outline: 2px solid saddlebrown;
+        text-align: left;
+        width: 525px;
+        padding: 0;
+    }
+
+    .header-content h1 {
+        font-size: 46px;
+        line-height: 1.1;
+        margin-top: 5.2rem;
+    }
+
+    .header-content div {
+        text-align: left;
+        margin: 0;
+    }
+
+    header button {
+        letter-spacing: 0;
+        padding: 1rem 1.2rem;
+    }
+
+    header button:first-child {
+        font-size: 14px;
+        margin-right: .5rem;
+    }
+    
+    header button:last-child {
+        margin-left: .5rem;
+        font-size: 14px;
+    }
+
+
+    /* Utilities */
+
+    .content {
+        font-size: 18.5px;
+        font-weight: 400;
+        letter-spacing: .1px;
+        line-height: 1.6;
+        color: var(--grayishBlue);
+        padding: 1.2rem 0 2rem 0;
+    }
+
+    .margin {
+        margin: 4rem 0;
     }
 }
