@@ -416,6 +416,26 @@ button, input {
 
 /* Responsive Styling */
 
+@media (max-width: 320px) {
+    .header-content button:first-child {
+        margin: 0 0 1.5rem 0;
+    }
+
+    .header-content button:first-child {
+        margin-left: 0;
+    }
+
+    .cards .card {
+        width: fit-content;
+    }
+
+    .faq-header svg{
+        overflow: visible;
+        width: fit-content;
+        height: 100%;
+    }
+}
+
 @media (min-width: 768px) {
     header {
         display: flex;
@@ -478,12 +498,12 @@ button, input {
     .tabs-container::before {
         content: "";
         position: absolute;
-        width: 38%;
-        height: 58%;
+        width: 44%;
+        height: 62%;
         background: var(--blue);
         left: 0;
-        bottom: -6%;
-        transform: translate(0, 6%);
+        bottom: -8%;
+        transform: translate(0, 8%);
         border-radius:0 0 30% 0;
         z-index: -1;
     }
@@ -619,12 +639,76 @@ button, input {
     }
 }
 
-@media (min-width: 1444px) {
-
-    /* Navbar */
-
+@media (min-width: 992px) {
     nav {
-        padding: 3rem 11rem;
+        padding: 3rem 4rem;
+    }
+
+    header {
+        padding: 0 4rem;
+    }
+
+    .header-content {
+        margin-bottom: 4rem;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        line-height: 1.1;
+        margin-top: 4.2rem;
+    }
+
+    header .svg-container {
+        outline: 2px solid saddlebrown;
+        padding-left: 1rem;
+    }
+
+    header .svg-container img {
+        width: 460px;
+    }
+
+    .tabs-container::before {
+        width: 44%;
+        height: 65%;
+        left: 0;
+        bottom: -10%;
+        transform: translate(0, 10%);
+    }
+
+    .tab {
+        padding: 0 4rem;
+    }
+
+    .tab .tab-content {
+        width: 50%;
+        padding: 3rem 0 0rem 3.5rem;
+        text-align: left;
+        outline: 2px solid violet;
+    }
+
+    .cards {
+        display: flex;
+        margin: 0 auto;
+        width: 950px;
+        height: 480px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card:first-child {
+        align-self: flex-start;
+    }
+
+    .card:last-child {
+        align-self: flex-end;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    nav {
+        padding: 3rem;
+        margin: 0 auto;
     }
 
     .nav-brand .icon-hamburger {
@@ -649,7 +733,7 @@ button, input {
         border-radius: 7px;
         padding: .9rem 2.5rem;
     }
-
+/*
     header .svg-container {
         outline: 2px solid saddlebrown;
         width: 740px;
@@ -697,7 +781,7 @@ button, input {
         margin-left: .5rem;
         font-size: 14px;
     }
-
+ */
 
     /* Utilities */
 
