@@ -751,8 +751,8 @@ button, input {
     }
     
     header .svg-container img {
-        width: 550px;
-        height: 400px;
+        width: 520px;
+        height: 380px;
     }
   
     header .header-content {
@@ -832,8 +832,8 @@ button, input {
     }
     
     header .svg-container img {
-        margin-left: 5.5rem;
-        width: 600px;
+        margin-left: 3.5rem;
+        width: 550px;
         height: 430px;
     }
 
@@ -871,5 +871,18 @@ button, input {
     .content {
         font-size: 18px;
     }
-   
+}
+
+@media (min-width: 1440px) {
+    header, .tabs-container {        
+        width: 1440px;
+    }
+
+    .tabs-container {
+        margin: 0 auto;
+    }
+
+    .margin{
+        margin: 4rem auto;
+    }
 }
