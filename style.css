@@ -56,6 +56,7 @@ header {
 header .svg-container {
     display: flex;
     padding: 0 .5rem .5rem .5rem;
+    position: relative;
 }
 
 .overlay-right::after {
@@ -133,7 +134,6 @@ header button:last-child {
 .tab .svg-container {
     padding: 0 2rem;
     padding-bottom: 2rem;
-    outline: 2px solid violet;
     position: relative;
 }
 
@@ -330,7 +330,9 @@ header button:last-child {
     height: 21px;
 }
 
-
+footer {
+    padding: 1rem 0;
+}
 
 .attribution {
     font-size: 11px;
@@ -442,6 +444,10 @@ button, input {
         width: 50%;
     }
 
+    .overlay-right::after {
+        display: none;
+    }
+
     header .header-content {
         outline: 2px solid saddlebrown;
         text-align: left;
@@ -456,6 +462,160 @@ button, input {
     .header-content div {
         text-align: left;
         margin: 0;
+    }
+
+    .features {
+        width: 480px;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 9.5rem;
+    }
+    
+    .tabs-container {
+        position: relative;
+    }
+
+    .tabs-container::before {
+        content: "";
+        position: absolute;
+        width: 38%;
+        height: 58%;
+        background: var(--blue);
+        left: 0;
+        bottom: -6%;
+        transform: translate(0, 6%);
+        border-radius:0 0 30% 0;
+        z-index: -1;
+    }
+
+    .tabs {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    .tabs .tab-header {
+        border-top: 0;
+    }
+    
+    .tabs .tab-header p {
+        padding: 1.5rem 2.5rem;
+        color: var(--darkBlue);
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .overlay-left::before {
+        display: none;
+    }
+
+    .tab {
+        display: flex;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+
+    .tab .svg-container {
+        width: 50%;
+        padding: 0;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .tab .svg-container img {
+        height: 100%;
+    }
+
+    .tab .tab-content {
+        width: 50%;
+        padding: 3rem 0 0rem 2.5rem;
+        text-align: left;
+        outline: 2px solid violet;
+    }
+
+    .tab-content button {
+        display: block;
+    }
+
+    .extension-container {
+        margin-top: 11rem;
+    }
+
+    .extension-container > p {
+        width: 480px;
+        margin: 0 auto;
+    }
+
+    .faq-container {
+        padding: 0;
+        margin: 9rem auto 7.5rem auto;
+        width: 450px;
+    }
+
+    .contact-container {
+        padding: 4.5rem 0 4rem 0;
+    }
+
+    .contact-container h3 {
+        font-size: 28px;
+        width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contact-container > div {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    .email {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .email-field {
+        width: 65%;
+    }
+
+    .contact-btn {
+        width: 25%;
+        margin-top: 0;
+    }
+
+    .links {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 1.5rem 2rem;
+    }
+    
+    .links ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .links ul li {
+        margin-top: 0;
+        margin-left: 2.5rem;
+    }
+    
+    .links-icon {
+        margin-left: auto;
+        display: flex;
+        width: 90px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .links-icon div {
+        width: 22px;
+        height: 23px;
+    }
+    
+    .links-icon div:last-child {
+        height: 21px;
     }
 }
 
