@@ -45,6 +45,14 @@ nav {
     display: none;
 }
 
+.nav-links button:hover, .uppercase li:hover {
+    color: var(--red);
+}
+
+.uppercase li {
+    transition: all .2s ease-in;
+}
+
 
 /* Header */
 
@@ -90,11 +98,24 @@ header .svg-container {
 
 header button:first-child {
     margin-right: .3rem;
+    border: 2px solid var(--blue);
+}
+
+header button:first-child:hover, .mi-btn:hover, .card div:last-child button:hover {
+    background: #ffffff;
+    color: var(--blue);
 }
 
 header button:last-child {
     margin-left: .3rem;
+    border: 2px solid #f0f0f0;
     font-weight: 500;
+}
+
+header button:last-child:hover {
+    color: var(--darkBlue);
+    border: 2px solid var(--darkBlue);
+    background: #ffffff;
 }
 
 
@@ -119,6 +140,12 @@ header button:last-child {
     color: var(--darkBlue);
     width: fit-content;
     margin: 0 auto;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.tabs .tab-header p:hover {
+    color: var(--red);
 }
 
 .active {
@@ -184,6 +211,7 @@ header button:last-child {
 }
 
 .card div:last-child button {
+    border: 2px solid var(--blue);
     width: 100%;
 }
 
@@ -239,7 +267,8 @@ header button:last-child {
 }
 
 .mi-btn {
-    padding: .9rem 1.5rem; 
+    padding: .9rem 1.5rem;
+    border: 2px solid var(--blue);
 }
 
 
@@ -279,6 +308,13 @@ header button:last-child {
     width: 100%;
     box-shadow: none;
     margin-top: 1rem;
+    border: 2px solid var(--red);
+    padding: 0;
+}
+
+.contact-btn:hover {
+    background: #ffffff;
+    color: var(--red);
 }
 
 /* Links Section */
@@ -320,6 +356,15 @@ header button:last-child {
 .links-icon div {
     width: 22px;
     height: 23px;
+    cursor: pointer;
+}
+
+svg path {
+    transition: all .2s ease-in;
+}
+
+.links-icon div:hover svg path {
+    fill: var(--red)
 }
 
 .links-icon div:last-child {
@@ -357,6 +402,7 @@ footer {
 }
 
 button, input {
+    outline: none;
     border: none;
     padding: .9rem 1rem;
     border-radius: 6px;
@@ -364,6 +410,12 @@ button, input {
     font-weight: 400;
     letter-spacing: .5px;
     box-shadow: 0 5px 5px #e0e0e0;
+    transition: all .2s ease-in;
+}
+
+button:active, input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .margin {
@@ -729,15 +781,27 @@ button, input {
         margin-right: 2.5rem;
         font-size: .85rem;
         letter-spacing: 1px;
+        transition: all .2s ease-in;
     }
 
     .login-btn {
-        border: 0;
+        outline: none;
+        border: 2px solid var(--red);
         font-size: .85rem;
         letter-spacing: 1px;
         background: var(--red);
         border-radius: 7px;
         padding: .9rem 2.5rem;
+        transition: all .2s ease-in;
+    }
+
+    .login-btn:hover, .login-btn:active {
+        border: 2px solid var(--red);
+        background: #ffffff;
+    }
+
+    .login-btn:active {
+        box-shadow: none;
     }
 
     header {
