@@ -309,7 +309,7 @@ header button:last-child:hover {
     box-shadow: none;
     margin-top: 1rem;
     border: 2px solid var(--red);
-    padding: 0;
+    padding: .8rem 0;
 }
 
 .contact-btn:hover {
@@ -375,14 +375,20 @@ footer {
     padding: 1rem 0;
 }
 
+footer {
+    background: var(--blue);
+}
+
 .attribution {
+    color: #ffffff;
     font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    text-decoration: underline;
 }
+
 
 
 /* Utilities */
