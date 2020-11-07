@@ -53,6 +53,84 @@ nav {
     transition: all .2s ease-in;
 }
 
+.menu {
+    outline: 2px solid springgreen;
+}
+
+.menu .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .login-btn {
+    outline: none;
+    border: 2px solid #ffffff;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    background: var(--darkBlue);
+    border-radius: 7px;
+    padding: .5rem 2.5rem;
+    box-shadow: none;
+    transition: all .2s ease-in;
+}
+
+.menu .login-btn:hover, .menu .login-btn:active {
+    border: 2px solid var(--red);
+    background: #ffffff;
+}
+
+.menu {
+    background: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 2.5rem 0;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+
+.menu ul li {
+    font-weight: 300;
+    margin-top: 2rem;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+}
+
+.menu ul li:first-child {
+    margin-top: 0;
+}
+
+.menu .links-icon {
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links-icon div {
+    width: 22px;
+    height: 23px;
+    cursor: pointer;
+}
+
+svg path {
+    transition: all .2s ease-in;
+}
+
+.links-icon div:hover svg path {
+    fill: var(--red)
+}
+
+.links-icon div:last-child {
+    height: 21px;
+}
 
 /* Header */
 
@@ -148,9 +226,12 @@ header button:last-child:hover {
     color: var(--red);
 }
 
+.tabs .tab-header .active:hover {
+    color: #000;
+}
+
 .active {
     border-bottom: 4px solid var(--red);
-    color: #000;
     font-weight: 500;
 }
 
@@ -276,6 +357,10 @@ header button:last-child:hover {
     border: 2px solid var(--blue);
 }
 
+.faq-header svg {
+    transition: all .2s ease-in;
+}
+
 
 /* Contact Section */
 
@@ -295,6 +380,20 @@ header button:last-child:hover {
     margin: 1rem 0 2rem 0;
 }
 
+.email-field {
+    border-radius: 6px;
+    position: relative;
+}
+
+.email-field img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 18%;
+    right: 2%;
+    transform: translate(-18%, -2%);
+}
+
 .email-input {
     width: 100%;
     box-shadow: none;
@@ -307,6 +406,15 @@ header button:last-child:hover {
 
 .email-input::placeholder {
     color: #cfcfcf;
+}
+
+.email-field div {
+    text-align: left;
+    font-size: 12px;
+    font-style: italic;
+    padding: .5rem 0 .5rem 1rem;
+    border-radius: 0 0 6px 6px;
+    transition: all .2s ease-in;
 }
 
 .contact-btn {
@@ -351,14 +459,14 @@ header button:last-child:hover {
     margin-top: 0;
 }
 
-.links-icon {
+.links .links-icon {
     display: flex;
     width: 90px;
     justify-content: space-between;
     align-items: center;
 }
 
-.links-icon div {
+.links .links-icon div {
     width: 22px;
     height: 23px;
     cursor: pointer;
@@ -368,20 +476,20 @@ svg path {
     transition: all .2s ease-in;
 }
 
-.links-icon div:hover svg path {
+.links .links-icon div:hover svg path {
     fill: var(--red)
 }
 
-.links-icon div:last-child {
+.links .links-icon div:last-child {
     height: 21px;
 }
 
 footer {
-    padding: 1rem 0;
+    padding: 0 0 2rem 0;
 }
 
 footer {
-    background: var(--blue);
+    background: var(--darkBlue);
 }
 
 .attribution {
@@ -420,6 +528,10 @@ button, input {
     font-weight: 400;
     letter-spacing: .5px;
     box-shadow: 0 5px 5px #e0e0e0;
+}
+
+button {
+    cursor: pointer;
     transition: all .2s ease-in;
 }
 
@@ -478,6 +590,10 @@ button:active, input:focus {
 
 .hide {
     display: none;
+}
+
+.red-bd {
+    border: 2px solid var(--red);
 }
 
 /* Responsive Styling */
@@ -678,6 +794,7 @@ button:active, input:focus {
     .contact-btn {
         width: 25%;
         margin-top: 0;
+        align-self: flex-start;
     }
 
     .links {
@@ -808,6 +925,10 @@ button:active, input:focus {
         font-size: .85rem;
         letter-spacing: 1px;
         transition: all .2s ease-in;
+    }
+
+    .menu {
+        display: none;
     }
 
     .login-btn {
