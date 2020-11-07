@@ -123,6 +123,10 @@ button:hover {
     color: hsl(231, 69%, 60%);
 }
 
+button:hover .loader div {
+    background: hsl(231, 69%, 60%);
+}
+
 button:active {
     box-shadow: none;
     background: #ffffff;
@@ -152,10 +156,13 @@ button:disabled {
     margin-left: .2rem;
 }
 
+.loader div {
+    background: #ffffff;
+}
+
 #bar1, #bar2, #bar3, #bar4, #bar5 {
     width: 3px;
     height: 3px;
-    background: #ffffff;
     margin-left: .25rem;
     border-radius: 25%;
     animation: animateLoader .75s ease-in-out infinite;

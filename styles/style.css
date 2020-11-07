@@ -239,13 +239,19 @@ header button:last-child:hover {
 
 .faq {
     border-bottom: 1px solid #e0e0e0;
-    padding: 1.5rem 0
+    padding: 1.5rem 0;
 }
 
 .faq-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.faq-header:hover {
+    color: var(--red);
 }
 
 .faq-header h4 {
@@ -254,7 +260,6 @@ header button:last-child:hover {
 }
 
 .faq p {
-    display: none;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: .3px;
@@ -390,7 +395,6 @@ footer {
 }
 
 
-
 /* Utilities */
 
 .heading {
@@ -466,6 +470,14 @@ button:active, input:focus {
 
 .open {
     transform: rotate(180deg);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
 
 /* Responsive Styling */
@@ -701,6 +713,14 @@ button:active, input:focus {
     
     .links-icon div:last-child {
         height: 21px;
+    }
+
+    .show {
+        display: flex;
+    }
+
+    .hide {
+        display: none;
     }
 }
 

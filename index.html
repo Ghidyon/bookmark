@@ -59,16 +59,16 @@
   <section class="tabs-container center-text">
     <div class="tabs">
       <div class="tab-header">
-        <p class="active">Simple Bookmarking</p>
+        <p class="active" id="tab-header1">Simple Bookmarking</p>
       </div>
       <div class="tab-header">
-        <p>Speedy Searching</p>
+        <p id="tab-header2">Speedy Searching</p>
       </div>
       <div class="tab-header">
-        <p>Easy Sharing</p>
+        <p id="tab-header3">Easy Sharing</p>
       </div>
     </div>
-    <div class="tab">
+    <div class="tab show" id="tab-1">
       <div class="svg-container overlay-left">
         <img src="images/illustration-features-tab-1.svg" alt="">
       </div>
@@ -79,8 +79,8 @@
         <button class="white blue-bg mi-btn">More Info</button>
       </div>
     </div>
-    <div class="tab" style="display: none;">
-      <div class="svg-container">
+    <div class="tab hide" id="tab-2">
+      <div class=" svg-container overlay-left">
         <img src="images/illustration-features-tab-2.svg" alt="">
       </div>
       <div class="tab-content">
@@ -90,8 +90,8 @@
         <button class="white blue-bg mi-btn">More Info</button>
       </div>
     </div>
-    <div class="tab" style="display: none;">
-      <div class="svg-container">
+    <div class="tab hide" id="tab-3">
+      <div class=" svg-container overlay-left">
         <img src="images/illustration-features-tab-3.svg" alt="">
       </div>
       <div class="tab-content">
@@ -162,47 +162,54 @@
       feel free
       to email us.</p>
     <div class="faq">
-      <div class="faq-header">
+      <div class="faq-header" id="faq-header1">
         <h4>What is Bookmark?</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
           <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
         </svg>
       </div>
-      <p class="gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies
+      <p class="gray hide" id="faq-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo
+        eget
+        ultricies
         fringilla.
         Phasellus blandit ipsum quis quam ornare mattis.</p>
     </div>
     <div class="faq">
-      <div class="faq-header">
+      <div class="faq-header" id="faq-header2">
         <h4>How can I request a new browser?</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
           <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
         </svg>
       </div>
-      <p class="gray">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+      <p class="gray hide" id="faq-2">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+        ligula.
         Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
         ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
         Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
     </div>
     <div class="faq">
-      <div class="faq-header">
+      <div class="faq-header" id="faq-header3">
         <h4>Is there a mobile app?</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
           <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
         </svg>
       </div>
-      <p class="gray">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+      <p class="gray hide" id="faq-3">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
+        dolor, ut
+        condimentum
         urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
         sollicitudin ex et ultricies bibendum.</p>
     </div>
     <div class="faq">
-      <div class="faq-header">
+      <div class="faq-header" id="faq-header4">
         <h4>What about other Chromium browsers?</h4>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
           <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
         </svg>
       </div>
-      <p class="gray">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+      <p class="gray hide" id="faq-4">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
+        dui.
+        Aliquam
         vitae neque eget nisl gravida pellentesque non ut velit.</p>
     </div>
     <div class="center-text">
@@ -260,11 +267,11 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-      <a href="https://www.twitter.com/ghidyon_" target="_blank">Gideon Akunana</a>.
+      <a href="https://www.twitter.com/ghidyon_" target="_blank">Ghidyon</a>.
     </p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
