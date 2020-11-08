@@ -110,3 +110,19 @@ const validateEmail = () => {
 }
 
 button.addEventListener("click", validateEmail);
+
+// Variables for hamburger menu 
+
+const hamburgerIcon = document.querySelector('.icon-hamburger');
+const closeIcon = document.querySelector('.close-icon');
+const menuItem = document.querySelector('.menu');
+
+hamburgerIcon.addEventListener("click", e => {
+    menuItem.classList.add('show-menu');
+    hamburgerIcon.classList.add('hide');
+})
+
+closeIcon.addEventListener("click", e => {
+    menuItem.classList.remove('show-menu');
+    hamburgerIcon.classList.remove('hide');
+})

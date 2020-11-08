@@ -54,57 +54,71 @@ nav {
 }
 
 .menu {
-    outline: 2px solid springgreen;
-}
-
-.menu .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: hsla(229, 31%, 21%, 0.9);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu .login-btn {
-    outline: none;
-    border: 2px solid #ffffff;
-    font-size: .85rem;
-    letter-spacing: 1px;
-    background: var(--darkBlue);
-    border-radius: 7px;
-    padding: .5rem 2.5rem;
-    box-shadow: none;
-    transition: all .2s ease-in;
-}
-
-.menu .login-btn:hover, .menu .login-btn:active {
-    border: 2px solid var(--red);
-    background: #ffffff;
-}
-
-.menu {
-    background: var(--darkBlue);
-    display: flex;
+    min-width: 100%;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    padding: 2.5rem 0;
+    padding: 2rem 2rem;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: all .2s ease-in;
+}
+
+.menu .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2.5rem 0;
+    justify-content: center;
+    padding: 2.5rem 0 2rem 0;
+    width: 100%;
 }
 
 .menu ul li {
     font-weight: 300;
-    margin-top: 2rem;
-    font-size: 14px;
+    padding: 1.2rem 0;
+    font-size: 18px;
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.404);
     letter-spacing: 2.5px;
+    text-align: center;
+    width: 100%;
 }
 
 .menu ul li:first-child {
-    margin-top: 0;
+    border-top: 1px solid hsla(229, 8%, 60%, 0.404);
+}
+
+.menu a {
+    width: 100%;
+}
+
+.menu .login-btn {
+    width: 100%;
+    outline: none;
+    border: 2px solid #ffffff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background: inherit;
+    border-radius: 7px;
+    padding: .7rem 2.5rem;
+    box-shadow: none;
+    transition: all .2s ease-in;
+}
+
+.menu .login-btn:hover, .menu .login-btn:active {
+    border: 2px solid #ffffff;
 }
 
 .menu .links-icon {
@@ -112,6 +126,7 @@ nav {
     width: 90px;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
 }
 
 .links-icon div {
@@ -596,6 +611,10 @@ button:active, input:focus {
     border: 2px solid var(--red);
 }
 
+.show-menu {
+    transform: translateX(0);
+}
+
 /* Responsive Styling */
 
 @media (max-width: 320px) {
@@ -814,7 +833,17 @@ button:active, input:focus {
         margin-top: 0;
         margin-left: 2.5rem;
     }
+
+    .menu {
+        min-width: 65%;
+    }
     
+    .menu .links-icon {
+        align-items: center;
+        margin: 0 auto;
+        margin-top: auto;
+    }
+
     .links-icon {
         margin-left: auto;
         display: flex;
@@ -901,6 +930,11 @@ button:active, input:focus {
 
     .card:last-child {
         align-self: flex-end;
+    }
+
+    .menu {
+        min-width: 50%;
+        padding: 3rem 2rem;
     }
 }
 
