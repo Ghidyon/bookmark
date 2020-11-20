@@ -120,9 +120,11 @@ const menuItem = document.querySelector('.menu');
 hamburgerIcon.addEventListener("click", e => {
     menuItem.classList.add('show-menu');
     hamburgerIcon.classList.add('hide');
+    document.body.style.overflow = "hidden";
 })
 
 closeIcon.addEventListener("click", e => {
     menuItem.classList.remove('show-menu');
     hamburgerIcon.classList.remove('hide');
+    document.body.style.overflow = "auto";
 })
