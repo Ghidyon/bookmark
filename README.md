@@ -1,5 +1,7 @@
 # Frontend Mentor - Bookmark landing page
 
+[View Live](https://ghidyon.github.io/bookmark)
+
 ![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
